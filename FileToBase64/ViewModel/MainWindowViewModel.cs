@@ -113,8 +113,8 @@ namespace FileToBase64.ViewModel
             Information = "File selection...";
             _log.Debug("file selection.");
 
-            // TODO: make ChooseFileToSerialise async.
-            // -> right now, if it's made async, we've got an error " task Current thread must be set to single thread apartment (STA)".
+            // TODO: select the source file in an async way.
+            // -> right now, if we await it, we've got an error " task Current thread must be set to single thread apartment (STA)".
             //string sourceFileFullPath = await Task.Run(() => SelectSourceFile());
             string sourceFileFullPath = SelectSourceFile();
 
