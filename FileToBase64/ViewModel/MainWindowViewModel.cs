@@ -189,7 +189,7 @@ namespace FileToBase64.ViewModel
                 _log.Debug("Trying to copy the serialised file to the clipboard.");
                 try
                 {
-                    System.Windows.Clipboard.SetDataObject(result);
+                    System.Windows.Clipboard.SetDataObject(result, true);
 
                     Information = "File serialised; content copied to clipboard.";
                     _log.Info("Serialised file copied to the clipboard.");
